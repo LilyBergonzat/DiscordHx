@@ -7,7 +7,6 @@
     "type": "git",
     "url": "https://github.com/ElianWonhalf/DiscordHx.git"
   },"dependencies": {
-    "discord.js": "^6.0.0",
     "nodehx": "^1.0.10"
   },
   "engines": {
