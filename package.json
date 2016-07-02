@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "A pack of externs to use DiscordJS with Haxe",
   "author": "Elian Wonhalf <elianwonhalf@gmail.com>",
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElianWonhalf/DiscordHx.git"
+  },"dependencies": {
     "discord.js": "^6.0.0",
     "nodehx": "^1.0.10"
   },
   "engines": {
     "node": ">=0.12.7"
-  }
+  },
+  "license": "MIT"
 }
