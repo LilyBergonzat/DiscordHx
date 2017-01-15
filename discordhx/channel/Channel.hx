@@ -1,11 +1,14 @@
 package discordhx.channel;
 
+import js.Promise;
 import discordhx.client.Client;
-import discordhx.Object;
 
-extern class Channel extends Equality implements Object {
+extern class Channel {
     public var client: Client;
-    public var isPrivate: Bool;
+    public var createdAt: Date;
+    public var createdTimestamp: Float;
+    public var id: String;
+    public var type: ChannelType;
 
-    public function delete(): Void;
+    public function delete(): Promise<Channel>;
 }

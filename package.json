@@ -1,16 +1,23 @@
 {
   "name": "discordhx",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A pack of externs to use DiscordJS with Haxe",
   "author": "Elian Wonhalf <elianwonhalf@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ElianWonhalf/DiscordHx.git"
-  },"dependencies": {
-    "nodehx": "^1.0.10"
+  },
+  "dependencies": {
+    "nodehx": "^1.0.10",
+    "shelljs": "^0.7.6"
   },
   "engines": {
     "node": ">=0.12.7"
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "test:ping": "haxe -main test.Ping --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/ping.js",
+    "test:avatar": "haxe -main test.Avatar --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/avatar.js"
   },
   "license": "MIT"
 }
