@@ -1,6 +1,6 @@
 {
   "name": "discordhx",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A pack of externs to use DiscordJS with Haxe",
   "author": "Elian Wonhalf <elianwonhalf@gmail.com>",
   "repository": {
@@ -9,15 +9,17 @@
   },
   "dependencies": {
     "nodehx": "^1.0.10",
-    "shelljs": "^0.7.6"
+    "shelljs": "^0.7.6",
+    "discord.js": "^11.0.0"
   },
   "engines": {
     "node": ">=0.12.7"
   },
   "scripts": {
-    "postinstall": "node postinstall.js",
-    "test:ping": "haxe -main test.Ping --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/ping.js",
-    "test:avatar": "haxe -main test.Avatar --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/avatar.js"
+    "test": "npm run test:all",
+    "test:all": "npm run test:ping && npm run test:avatar",
+    "test:ping": "node prepare-tests.js && haxe -main test.Ping --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/ping.js",
+    "test:avatar": "node prepare-tests.js && haxe -main test.Avatar --macro include('discordhx') -debug -D no-simplify -cp ./node_modules/nodehx -cp ./ -js ./out/avatar.js"
   },
   "license": "MIT"
 }

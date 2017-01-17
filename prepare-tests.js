@@ -1,4 +1,3 @@
-require('shelljs/global');
 const fs = require('fs');
 
 try {
@@ -6,5 +5,3 @@ try {
 } catch (e) {
     fs.mkdirSync('./out');
 }
-
-exec('cd out && npm install discord.js');
