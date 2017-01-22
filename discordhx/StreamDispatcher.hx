@@ -18,7 +18,7 @@ extern class StreamDispatcher extends EventEmitter {
 }
 
 @:enum
-abstract StreamDispatcherEvent(String) {
+abstract StreamDispatcherEvent(String) to String {
     var DEBUG = 'debug';
     var END = 'end';
     var ERROR = 'error';

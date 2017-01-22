@@ -1,7 +1,7 @@
 package discordhx.channel;
 
 @:enum
-abstract PartialGuildChannelType (String) {
+abstract PartialGuildChannelType (String) to String {
     var TEXT = 'text';
     var VOICE = 'voice';
 }

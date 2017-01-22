@@ -53,7 +53,7 @@ extern class Client extends EventEmitter {
 }
 
 @:enum
-abstract ClientEvent(String) {
+abstract ClientEvent(String) to String {
     var CHANNEL_CREATE = 'channelCreate';
     var CHANNEL_DELETE = 'channelDelete';
     var CHANNEL_PINS_UPDATE = 'channelPinsUpdate';

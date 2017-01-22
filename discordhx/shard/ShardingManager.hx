@@ -21,7 +21,7 @@ extern class ShardingManager {
 }
 
 @:enum
-abstract ShardingManagerEvent(String) {
+abstract ShardingManagerEvent(String) to String {
     var LAUNCH = 'launch';
     var MESSAGE = 'message';
 }

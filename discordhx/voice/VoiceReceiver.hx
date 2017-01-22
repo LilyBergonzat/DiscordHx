@@ -15,7 +15,7 @@ extern class VoiceReceiver extends EventEmitter {
 }
 
 @:enum
-abstract VoiceReceiverEvent(String) {
+abstract VoiceReceiverEvent(String) to String {
     var OPUS = 'opus';
     var PCM = 'pcm';
     var WARN = 'warn';

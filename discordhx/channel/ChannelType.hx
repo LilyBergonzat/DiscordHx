@@ -1,7 +1,7 @@
 package discordhx.channel;
 
 @:enum
-abstract ChannelType (String) {
+abstract ChannelType (String) to String {
     var DM = 'dm';
     var GROUP = 'group';
     var TEXT = 'text';

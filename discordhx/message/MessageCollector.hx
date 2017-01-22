@@ -21,7 +21,7 @@ extern class MessageCollector extends EventEmitter {
 }
 
 @:enum
-abstract MessageCollectorEvent(String) {
+abstract MessageCollectorEvent(String) to String {
     var END = 'end';
     var MESSAGE = 'message';
 }

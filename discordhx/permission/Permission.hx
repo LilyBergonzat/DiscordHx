@@ -1,7 +1,7 @@
 package discordhx.permission;
 
 @:enum
-abstract Permission(String) {
+abstract Permission(String) to String {
     var CREATE_INSTANT_INVITE = 'CREATE_INSTANT_INVITE';
     var KICK_MEMBERS = 'KICK_MEMBERS';
     var BAN_MEMBERS = 'BAN_MEMBERS';

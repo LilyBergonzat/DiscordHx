@@ -21,7 +21,7 @@ extern class VoiceConnection extends EventEmitter {
 }
 
 @:enum
-abstract VoiceConnectionEvent(String) {
+abstract VoiceConnectionEvent(String) to String {
     var DEBUG = 'debug';
     var DISCONNECT = 'disconnect';
     var ERROR = 'error';
