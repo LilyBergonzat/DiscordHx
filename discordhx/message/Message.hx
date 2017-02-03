@@ -49,8 +49,8 @@ extern class Message {
     public function editCode(lang: String, content: StringResolvable): Promise<Message>;
     public function equals(message: Message, rawData: Dynamic): Bool;
     public function fetchWebhook(): Promise<Webhook>;
-    public function isMemberMentionned(member: EitherType<GuildMember, User>): Bool;
-    public function isMentionned(data: EitherType<GuildChannel, EitherType<User, EitherType<Role, String>>>): Bool;
+    public function isMemberMentioned(member: EitherType<GuildMember, User>): Bool;
+    public function isMentioned(data: EitherType<GuildChannel, EitherType<User, EitherType<Role, String>>>): Bool;
     public function pin(): Promise<Message>;
     public function react(emoji: EitherType<String, EitherType<Emoji, ReactionEmoji>>): Promise<MessageReaction>;
     public function reply(content: StringResolvable, ?options: MessageOptions): Promise<EitherType<Message, Array<Message>>>;
