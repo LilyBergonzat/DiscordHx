@@ -4,6 +4,7 @@ import discordhx.js.JSMap;
 import haxe.extern.EitherType;
 import js.Promise;
 
+@:native('(require("discord.js")).Collection')
 extern class Collection<K, V> extends JSMap<K, V> {
     public function array(): Array<V>;
     public function concat(collections: Collection<K, V>): Collection<K, V>;
