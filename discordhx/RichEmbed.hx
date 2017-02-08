@@ -1,6 +1,7 @@
 package discordhx;
 
 import haxe.extern.EitherType;
+
 @:native('(require("discord.js")).RichEmbed')
 extern class RichEmbed {
     public var author: Dynamic;
@@ -14,7 +15,7 @@ extern class RichEmbed {
     public var title: String;
     public var url: String;
 
-    public function new(data: Dynamic): Void;
+    public function new(?data: Dynamic): Void;
     public function addField(name: StringResolvable, value: StringResolvable, ?isInline: Bool): RichEmbed;
     public function setAuthor(name: StringResolvable, ?icon: String, ?url: String): RichEmbed;
     public function setColor(color: EitherType<String, EitherType<Int, Array<Int>>>): RichEmbed;
